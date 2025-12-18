@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: mobile-shop-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m gunicorn backend.wsgi:application
+
